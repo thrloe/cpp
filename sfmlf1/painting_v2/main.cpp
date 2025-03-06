@@ -12,7 +12,7 @@ int main() {
     unsigned int screenWidth = desktop.width;
     unsigned int screenHeight = desktop.height;
 
-    RenderWindow window(VideoMode(screenWidth, screenHeight), "Drawing Squares with Menu");
+    RenderWindow window(VideoMode(screenWidth, screenHeight), "Drawing");
     window.setFramerateLimit(360);
 
     std::vector<RectangleShape> squares;
