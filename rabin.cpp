@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-long long calculateHash(const std::string& s) {
+long long calculateHash(std::string s) {
     long long hashValue = 1;
     for (char c : s) {
         hashValue *= static_cast<long long>(c);
@@ -9,7 +9,7 @@ long long calculateHash(const std::string& s) {
     return hashValue;
 }
 
-void rabin(const std::string& text, const std::string& pattern) {
+void rabin(std::string text, std::string pattern) {
     long long patternHash = calculateHash(pattern);
     int patternLen = pattern.size();
     int textLen = text.size();
