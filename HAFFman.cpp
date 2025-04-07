@@ -17,10 +17,17 @@ int main(){
     vector<HAFFNODE*> list1;
     int n;
     cin >> n;
+    cout << " готово: " << n << endl;
     for(int i = 0; i < n; i++){
         double freq;
         string chr;
-        cin >> freq >> chr;
+        cout << "частота: " << endl;
+        cin >> freq;
+        cout << "ага: " << freq << endl; 
+        cout << "буква: " << endl;
+        cin >> chr;
+        cout << "ага: " << chr << endl; 
+
         HAFFNODE* l = new HAFFNODE;
         l->chr = chr;
         l->freq = freq;
@@ -67,16 +74,17 @@ int main(){
     cin >> INPUT;
     HAFFNODE H = *list1[0];
     for (int i = 0; i < INPUT.length(); i++){
-        int code = 0;
+        for (int j = 0; j < n; j++)
+        int code1 = 0;
         if (H.left->chr.find(INPUT[i], 0) != string::npos){
             H = *H.left;
-            code = code * 10 + 1;
+            code1 = code1 * 10 + 1;
         }
         if (H.right->chr.find(INPUT[i], 0) != string::npos){
             H = *H.right;
-            code = code * 10 + 0;
+            code1 = code1 * 10 + 0;
         }
-        cout << INPUT[i] << " - " << code;
+        cout << INPUT[i] << " - " << code1;
     }
     return 0;
 }
