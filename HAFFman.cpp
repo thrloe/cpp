@@ -74,15 +74,16 @@ int main(){
     cin >> INPUT;
     HAFFNODE H = *list1[0];
     for (int i = 0; i < INPUT.length(); i++){
-        for (int j = 0; j < n; j++)
         int code1 = 0;
-        if (H.left->chr.find(INPUT[i], 0) != string::npos){
-            H = *H.left;
-            code1 = code1 * 10 + 1;
-        }
-        if (H.right->chr.find(INPUT[i], 0) != string::npos){
-            H = *H.right;
-            code1 = code1 * 10 + 0;
+        for (int j = 0; j < n; j++){
+            if (H.left->chr.find(INPUT[i], 0) != string::npos){
+                H = *H.left;
+                code1 = code1 * 10 + 1;
+            }
+            if (H.right->chr.find(INPUT[i], 0) != string::npos){
+                H = *H.right;
+                code1 = code1 * 10 + 0;
+            }
         }
         cout << INPUT[i] << " - " << code1;
     }
