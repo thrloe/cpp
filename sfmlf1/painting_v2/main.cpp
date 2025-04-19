@@ -23,7 +23,7 @@ int main() {
     Color squareColor = Color::Black;  
 
     Font font;
-    font.loadFromFile("Arial.ttf");
+    font.loadFromFile("arial.ttf");
 
     // кнопки
     RectangleShape lengthBox(Vector2f(100, 30));
