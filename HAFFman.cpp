@@ -17,16 +17,12 @@ int main(){
     vector<HAFFNODE*> list1;
     int n;
     cin >> n;
-    cout << " готово: " << n << endl;
+    cout << n << endl;
     for(int i = 0; i < n; i++){
         double freq;
         string chr;
-        cout << "частота: " << endl;
         cin >> freq;
-        cout << "ага: " << freq << endl; 
-        cout << "буква: " << endl;
         cin >> chr;
-        cout << "ага: " << chr << endl; 
 
         HAFFNODE* l = new HAFFNODE;
         l->chr = chr;
